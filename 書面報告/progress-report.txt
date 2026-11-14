@@ -1,0 +1,29 @@
+Sara Chen | 個人履歷網站製作進度紀錄
+製作版本：2026-11-14
+
+[網站規劃]
+- 採一頁式履歷，粉紫色系與五段經歷左右交錯圖文呈現。
+- 區塊依序：首頁、關於我、技能專長、經歷故事、活動紀錄、聯絡我。
+
+[素材整理]
+- 提供個人生活照、志工服務、國慶禮賓、全民運動會、機器人教學與直排輪教學照片。
+- 調整圖片尺寸、轉 WebP 壓縮，影片以 MP4 保存。
+
+[HTML 與 CSS]
+- 使用 header、nav、main、section、article、aside、footer 語意標籤。
+- 導覽列連到頁面內的 about、skills、experience、gallery、contact 錨點。
+- 五項技能以 CSS 自訂進度條呈現，不使用圖檔代替。
+- 經歷卡片與互動效果皆以 CSS 排版，具桌面與手機版自適應規則。
+- CSS 的互動效果以註解標明。
+
+[依老師文件進行修訂]
+- 將 style.css 移動至 assets/style.css。
+- 修正 CSS 內圖片背景引用位置，並修正 index.html 的樣式表路徑。
+- 規整 HTML 縮排，增進可讀性，保留原版面與內容。
+- 新增書面報告資料夾與專案說明文件。
+- 檔案名稱採英文小寫；唯一中文資料夾名稱「書面報告」依教師講義命名。
+
+[待使用者於 GitHub / i-Learning 完成的步驟]
+- 將此修訂版同步至 GitHub Repository，並刪除舊的根目錄 style.css、README.txt。
+- 開啟 GitHub Pages 網頁確認檔案與影片仍正常顯示。
+- 在 i-Learning 上傳完整檔案，並在 Google 表單填寫網頁與 .git 網址。

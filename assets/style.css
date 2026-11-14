@@ -1,0 +1,1103 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap");
+:root {
+  --ink: #3c304a;
+  --muted: #81768d;
+  --purple: #8568ab;
+  --light: #f9f5fc;
+  --pink: #f8dce9;
+  --lavender: #e9e0f4;
+  --line: #e9e1ee;
+  --white: #fff;
+  --max: 1100;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 115px;
+}
+body {
+  margin: 0;
+  background: #fffdfd;
+  color: var(--ink);
+  font-family: "DM Sans","Noto Sans TC",sans-serif;
+  line-height: 1.8;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.wrap {
+  width: min(1100px,calc(100% - 48px));
+  margin: auto;
+}
+.site-header {
+  background: #fff;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  width: min(1100px,calc(100% - 48px));
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.brand-mark {
+  color: #c79cce;
+}
+.brand-dot {
+  color: #d5a6ba;
+}
+.header-caption {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #9887a4;
+}
+.header-caption span {
+  color: #e0a6bc;
+}
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fffdfdf2;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  width: min(1100px,calc(100% - 48px));
+  margin: auto;
+  display: flex;
+  gap: 35px;
+  padding: 13px 0;
+}
+.nav-inner a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b6077;
+  transition: color .25s;
+}
+/* [特效1] 導覽選項 hover 時平滑變色（transition: color） */
+.nav-inner a:hover {
+  color: #c77b9e;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: 35px;
+  min-height: 590px;
+  padding: 60px 0 75px;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #a27eb5;
+}
+.tiny-star {
+  color: #df9ebd;
+}
+.hero h1 {
+  font-size: clamp(54px,6.4vw,92px);
+  line-height: 1.13;
+  letter-spacing: -3px;
+  margin: 20px 0 22px;
+  font-weight: 800;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #c78cad;
+}
+.hero h1 span {
+  font-size: .52em;
+  letter-spacing: 4px;
+}
+.hero-lead {
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+.hero-sub {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 430px;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 23px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform .25s,box-shadow .25s;
+}
+/* [特效2] 按鈕 hover 上移並出現陰影（transition + transform + box-shadow） */
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 20px #ad8db333;
+}
+.primary {
+  background: #8f72b4;
+  color: white;
+}
+.secondary {
+  border: 1px solid #bca9d1;
+  color: #8467a5;
+}
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+.hero-stats strong {
+  font-size: 27px;
+  line-height: 1.2;
+}
+.hero-stats span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.hero-visual {
+  height: 470px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.hero-orbit {
+  position: absolute;
+  border-radius: 50%;
+  inset: 25px 24px 25px 24px;
+  background: #f1e7f5;
+  transform: rotate(-12deg);
+}
+.orbit-two {
+  inset: 50px 0 0 50px;
+  background: #f8e2ed;
+  transform: rotate(20deg);
+}
+.hero-photo {
+  width: 75%;
+  height: 90%;
+  border-radius: 210px 210px 150px 150px;
+  overflow: hidden;
+  position: relative;
+  border: 9px solid white;
+  box-shadow: 0 25px 50px #5b466e23;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+.photo-sticker {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  padding: 10px 19px;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px #4634521c;
+  font-size: 12px;
+  font-weight: 800;
+}
+.sticker-top {
+  top: 60px;
+  right: -10px;
+  transform: rotate(9deg);
+}
+.sticker-bottom {
+  bottom: 43px;
+  left: -12px;
+  transform: rotate(-7deg);
+  color: #ad7d9d;
+}
+.hero-sparkle {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  font-size: 58px;
+  color: #c8a2d6;
+}
+.marquee {
+  background: #e9ddf2;
+  overflow: hidden;
+  padding: 12px 0;
+  color: #775b93;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-align: center;
+  white-space: nowrap;
+}
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.section-heading {
+  margin-bottom: 38px;
+}
+.section-heading h2 {
+  font-size: clamp(31px,4vw,46px);
+  line-height: 1.35;
+  margin: 8px 0;
+}
+.section-heading h2 i {
+  font-size: .52em;
+  font-weight: 500;
+  color: #b09abb;
+  font-style: normal;
+  margin-left: 10px;
+}
+.section-heading p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+.about-card,.profile-card,.skills-panel,.interests-panel {
+  border-radius: 23px;
+  padding: 36px;
+  border: 1px solid var(--line);
+}
+.about-card {
+  background: #fff;
+}
+.card-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #b38fbf;
+  letter-spacing: 2px;
+}
+.about-card h3 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+.about-card p {
+  font-size: 14px;
+  color: #6f6477;
+}
+.about-card blockquote {
+  border-left: 3px solid #cf9bbd;
+  margin: 24px 0 0;
+  padding: 5px 0 5px 17px;
+  color: #9872a2;
+  font-size: 14px;
+  font-weight: 700;
+}
+.profile-card {
+  background: #f8f1fb;
+}
+.profile-title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+.profile-card dl {
+  margin: 25px 0;
+}
+.profile-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #e6dbea;
+  padding: 12px 0;
+}
+.profile-card dt {
+  color: #9585a0;
+  font-size: 12px;
+}
+.profile-card dd {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+.mini-tags {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.mini-tags span {
+  background: #fff;
+  border-radius: 30px;
+  padding: 5px 12px;
+  font-size: 10px;
+  color: #a080af;
+}
+.section-tint {
+  background: #faf6fc;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 24px;
+}
+.skills-panel,.interests-panel {
+  background: #fff;
+}
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.panel-heading h3 {
+  font-size: 19px;
+  margin: 0;
+}
+.panel-heading span {
+  font-size: 10px;
+  color: #ab9cb4;
+  letter-spacing: 2px;
+}
+.skill {
+  margin: 20px 0;
+}
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+.skill-label strong {
+  color: #9671ac;
+}
+.skill-track {
+  height: 10px;
+  background: #f1e8f3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  width: var(--level);
+  border-radius: 20px;
+  background: linear-gradient(90deg,#a68bcb,#e8aac4);
+}
+.skill-note {
+  font-size: 11px;
+  color: #a39aaa;
+  margin: 25px 0 0;
+}
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+}
+.interest-grid div {
+  border-radius: 16px;
+  background: #faf5fc;
+  padding: 18px 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform .25s,background .25s;
+}
+.interest-grid div span {
+  display: block;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+/* [特效3] 興趣卡片 hover 上移與變底色（transition + transform） */
+.interest-grid div:hover {
+  transform: translateY(-5px);
+  background: #f2e7f6;
+}
+.interest-quote {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 19px;
+  color: #b98fae;
+  font-style: italic;
+}
+.interest-quote span {
+  font-size: 24px;
+}
+.experience-list {
+  display: grid;
+  gap: 22px;
+}
+.experience-card {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform .3s,box-shadow .3s;
+}
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px #6e50721a;
+}
+.exp-photo {
+  min-height: 275px;
+  background: #efe7f3;
+}
+.exp-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* [照片呈現] 運動會直式活動照保留完整構圖，背景以同張照片柔焦填滿 */
+.sports-photo {
+  position: relative;
+  background: #f4ebf7 url("../image/sports_event.webp") center 26%/cover no-repeat;
+}
+.sports-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f3e6f040;
+  backdrop-filter: blur(16px);
+}
+.experience-card:nth-child(4) .sports-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  padding: 8px 0;
+  background: transparent;
+}
+.exp-content {
+  padding: 30px 34px;
+}
+.exp-no {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b38cbb;
+  font-weight: 800;
+}
+.exp-content h3 {
+  font-size: 21px;
+  margin: 12px 0;
+}
+.exp-content p {
+  font-size: 13px;
+  line-height: 2.05;
+  color: #70667a;
+  margin: 0 0 16px;
+}
+.exp-chip {
+  display: inline-block;
+  margin: 3px 5px 0 0;
+  border-radius: 40px;
+  background: #f8eff8;
+  padding: 5px 13px;
+  font-size: 10px;
+  color: #9777a8;
+}
+.evidence-note {
+  font-size: 11px;
+  color: #9b8da4;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 17px;
+}
+.gallery-grid figure {
+  margin: 0;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 9px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.gallery-grid figcaption {
+  padding: 12px 8px 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.video-card {
+  margin-top: 22px;
+  border-radius: 22px;
+  background: #eee3f4;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  align-items: center;
+  gap: 26px;
+}
+.video-card h3 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+.video-card p {
+  font-size: 13px;
+  color: #84748e;
+}
+.video-card video {
+  width: 100%;
+  border-radius: 14px;
+  background: #2c2532;
+  max-height: 310px;
+}
+.contact-card {
+  border-radius: 28px;
+  padding: 55px;
+  background: linear-gradient(120deg,#f8e8f0,#eee7f9);
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  gap: 45px;
+}
+.contact-card h2 {
+  font-size: 38px;
+  margin: 9px 0;
+}
+.contact-card h2 span {
+  color: #b881a9;
+}
+.contact-card p {
+  font-size: 13px;
+  color: #75677d;
+}
+.contact-card .button {
+  margin-top: 17px;
+}
+.email-note {
+  font-size: 11px !important;
+  margin-top: 13px;
+}
+.contact-links {
+  align-self: center;
+}
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9c7e0;
+  padding: 15px 2px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: padding .25s;
+}
+/* [特效4] 聯絡連結 hover 位移（transition: padding） */
+.contact-links a:hover {
+  padding-left: 12px;
+}
+.contact-links strong {
+  color: #9876ad;
+}
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a294ac;
+}
+.footer-inner>span:first-child {
+  font-size: 16px;
+  color: #5e4b70;
+}
+.footer-inner>span:first-child span {
+  color: #c99ab8;
+}
+.footer-inner a {
+  letter-spacing: 1px;
+}
+
+@media (max-width:780px) {
+  .header-caption {
+    display: none;
+  }
+  .nav-inner {
+    gap: 18px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+  }
+  .hero-visual {
+    height: 380px;
+    grid-row: 1;
+  }
+  .hero-copy {
+    text-align: center;
+  }
+  .hero-sub {
+    margin: auto;
+  }
+  .hero-actions,.hero-stats {
+    justify-content: center;
+  }
+  .about-layout,.skills-grid,.contact-card,.video-card {
+    grid-template-columns: 1fr;
+  }
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+  .exp-photo {
+    height: 260px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .contact-card {
+    padding: 32px;
+  }
+  .footer-inner {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width:480px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+  .hero h1 {
+    font-size: 55px;
+  }
+  .hero-stats {
+    gap: 20px;
+  }
+  .hero-visual {
+    height: 315px;
+  }
+  .about-card,.profile-card,.skills-panel,.interests-panel {
+    padding: 24px;
+  }
+  .interest-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-content {
+    padding: 24px;
+  }
+  .section-heading h2 i {
+    display: block;
+    margin: 0;
+  }
+  .contact-card h2 {
+    font-size: 30px;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,*:before,*:after {
+    transition: none !important;
+  }
+}
+.sports-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#e9dff5,#f8e8f0);
+  color: #9472ad;
+  gap: 10px;
+}
+.sports-placeholder span {
+  font-size: 65px;
+}
+.sports-placeholder strong {
+  letter-spacing: 3px;
+  font-size: 17px;
+}
+.sports-placeholder small {
+  font-size: 12px;
+}
+/* [照片呈現] 全民運照片在活動紀錄以人物上半身為重點 */
+.gallery-grid figure:nth-child(3) img {
+  object-position: center 17%;
+}
+/* [新增特色版型] 教學案例使用「照片＋教學方法三步驟」的專題式排版，與一般經歷卡片不同 */
+.teaching-feature {
+  display: grid;
+  grid-template-columns: 41% 59%;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid #e8d9ed;
+  background: linear-gradient(135deg,#fcf4fa 0%,#f8f3ff 100%);
+  box-shadow: 0 8px 35px #8568ab0d;
+  isolation: isolate;
+  transition: transform .3s ease,box-shadow .3s ease;
+}
+/* [特效5] 經歷卡片 hover 上移與加深陰影（transition + transform） */
+.teaching-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 19px 45px #8568ab26;
+}
+.teaching-photo-area {
+  position: relative;
+  min-height: 445px;
+  padding: 24px;
+  background: linear-gradient(155deg,#eee3f4,#f9dfe9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teaching-photo-frame {
+  height: 100%;
+  width: 100%;
+  min-height: 398px;
+  border-radius: 140px 140px 25px 25px;
+  overflow: hidden;
+  border: 7px solid #ffffffc9;
+  box-shadow: 0 20px 35px #5a44751f;
+  position: relative;
+  background: #ede3f0;
+}
+.teaching-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .55s ease;
+}
+/* [特效6] 教學照片滑鼠移入時輕微放大：transition + transform */
+.teaching-feature:hover .teaching-photo-frame img {
+  transform: scale(1.045);
+}
+.teaching-photo-label {
+  position: absolute;
+  bottom: 37px;
+  right: 5px;
+  max-width: 96%;
+  background: #fffafdeb;
+  border: 1px solid #ead7ed;
+  box-shadow: 0 5px 15px #60477019;
+  border-radius: 100px;
+  padding: 12px 18px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  color: #88699f;
+  transform: rotate(-4deg);
+}
+.teaching-photo-label span {
+  color: #c693b6;
+}
+.teaching-corner-star {
+  position: absolute;
+  right: 13px;
+  top: 4px;
+  font-size: 52px;
+  color: #b59ac5;
+}
+.teaching-body {
+  padding: 36px 38px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.teaching-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10px;
+  color: #aa83b5;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.teaching-accent {
+  border: 1px solid #e5d0e9;
+  background: #fffafd;
+  padding: 3px 12px;
+  border-radius: 100px;
+  letter-spacing: 0;
+}
+.teaching-body h3 {
+  font-size: clamp(26px,3vw,36px);
+  letter-spacing: -.4px;
+  line-height: 1.4;
+  margin: 14px 0 6px;
+}
+.teaching-body h3 span {
+  font-weight: 500;
+  color: #a685b6;
+  margin-left: 9px;
+}
+.teaching-summary {
+  color: #b67c9f;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 13px;
+}
+.teaching-description {
+  font-size: 13px;
+  line-height: 2.05;
+  color: #71647b;
+  margin: 0;
+}
+.teaching-methods {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 9px;
+  margin: 22px 0 17px;
+}
+.teaching-methods>div {
+  border-radius: 16px;
+  padding: 13px 10px 12px;
+  background: #fff;
+  border: 1px solid #eddfef;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: background .25s,transform .25s;
+}
+/* [特效7] 教學步驟小卡滑入時上浮並改變底色：transition + transform */
+.teaching-methods>div:hover {
+  transform: translateY(-4px);
+  background: #fff3f8;
+}
+.method-no {
+  font-size: 11px;
+  color: #d19cba;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.teaching-methods strong {
+  font-size: 12px;
+  color: #584767;
+}
+.teaching-methods small {
+  font-size: 10px;
+  color: #93879b;
+  line-height: 1.5;
+}
+.teaching-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.teaching-tags span {
+  background: #eae1f5;
+  border-radius: 99px;
+  padding: 4px 10px;
+  color: #846da3;
+  font-size: 10px;
+  font-weight: 700;
+}
+/* [交錯版型] 經歷照片左、右、左、右、左交錯，強化閱讀節奏 */
+.feature-reverse {
+  grid-template-columns: 59% 41%;
+  background: linear-gradient(110deg, #fbf5ff, #fff2f7);
+}
+.feature-reverse .teaching-photo-area {
+  grid-column: 2;
+  grid-row: 1;
+  background: linear-gradient(150deg, #f9dfe9, #eae1f8);
+}
+.feature-reverse .teaching-body {
+  grid-column: 1;
+  grid-row: 1;
+}
+.feature-reverse .teaching-photo-label {
+  right: auto;
+  left: 4px;
+  transform: rotate(4deg);
+}
+.feature-robot .teaching-photo-frame img {
+  object-position: center 47%;
+}
+.feature-volunteer .teaching-photo-frame img {
+  object-position: center 35%;
+}
+.feature-skating .teaching-photo-frame img {
+  object-position: center 59%;
+}
+.feature-national .teaching-photo-area {
+  background: linear-gradient(150deg, #eae2ee, #f9e3ed);
+}
+/* [照片比例] 禮賓旗袍與全民運直式獨照完整顯示，模糊底層避免兩側空白 */
+.feature-national .teaching-photo-frame,
+.feature-sports .teaching-photo-frame {
+  isolation: isolate;
+}
+.feature-national .teaching-photo-frame::before,
+.feature-sports .teaching-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background-position: center;
+  background-size: cover;
+  filter: blur(16px) brightness(1.1);
+  opacity: .45;
+  z-index: -1;
+}
+.feature-national .teaching-photo-frame::before {
+  background-image: url("../image/national_day.webp");
+}
+.feature-sports .teaching-photo-frame::before {
+  background-image: url("../image/sports_event.webp");
+}
+.feature-national .teaching-photo-frame img,
+.feature-sports .teaching-photo-frame img {
+  position: relative;
+  object-fit: contain;
+  padding: 6px 0;
+}
+.feature-sports .teaching-photo-area {
+  background: linear-gradient(150deg, #f2dfea, #ebe6f9);
+}
+/* [國慶照片] 完整顯示旗袍全身照，背景使用同張照片柔焦填補橫向版型空隙 */
+.national-photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #eadde7;
+}
+.national-photo::before {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  background: url("../image/national_day.webp") center/cover no-repeat;
+  filter: blur(17px) brightness(1.09);
+  opacity: .55;
+  z-index: -1;
+}
+.national-photo img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: contain;
+  padding: 9px 0;
+}
+@media (max-width:900px) {
+  .teaching-feature,.feature-reverse {
+    grid-template-columns: 1fr;
+  }
+  .feature-reverse .teaching-photo-area,.feature-reverse .teaching-body {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .feature-reverse .teaching-photo-area {
+    order: 0;
+  }
+  .feature-reverse .teaching-body {
+    order: 1;
+  }
+  .teaching-photo-area {
+    min-height: 370px;
+  }
+  .teaching-photo-frame {
+    height: 330px;
+    min-height: 330px;
+    border-radius: 150px 150px 25px 25px;
+  }
+  .teaching-body {
+    padding: 30px;
+  }
+}
+@media (max-width:480px) {
+  .teaching-photo-area {
+    padding: 18px;
+    min-height: 320px;
+  }
+  .teaching-photo-frame {
+    height: 284px;
+    min-height: 284px;
+  }
+  .teaching-photo-label {
+    bottom: 21px;
+    font-size: 9px;
+  }
+  .teaching-body {
+    padding: 24px 21px;
+  }
+  .teaching-body h3 span {
+    display: block;
+    margin: 0;
+  }
+  .teaching-methods {
+    gap: 6px;
+  }
+  .teaching-methods>div {
+    padding: 10px 7px;
+  }
+  .teaching-methods strong {
+    font-size: 11px;
+  }
+  .teaching-methods small {
+    font-size: 9px;
+  }
+}
+/* [行動裝置修正] 避免首頁裝飾圓形超出手機螢幕而造成橫向捲動 */
+@media (max-width:480px) {
+  .hero-visual {
+    overflow: clip;
+  }
+}
+/* [視覺調整] 各案例卡片保有相同閱讀順序與一致的邊界距離 */
+@media (max-width: 900px) {
+  .teaching-feature, .feature-reverse {
+    grid-template-columns: 1fr;
+  }
+  .feature-reverse .teaching-photo-area,
+  .feature-reverse .teaching-body {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .feature-reverse .teaching-photo-area {
+    order: 0;
+  }
+  .feature-reverse .teaching-body {
+    order: 1;
+  }
+}
+/* [版型一致性] 桌面版固定圖片展示高度，使五項經歷的卡片節奏一致 */
+@media (min-width: 901px) {
+  .teaching-photo-area {
+    min-height: 520px;
+  }
+  .teaching-photo-frame {
+    height: 470px;
+    min-height: 0;
+  }
+}
